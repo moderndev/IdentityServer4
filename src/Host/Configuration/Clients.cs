@@ -19,6 +19,22 @@ namespace Host.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
+                    ClientId = "client.moderndev",
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256()),
+                        new Secret("secret"),
+                    },
+                    RedirectUris = { "http://localhost:40080/signin-oidc" },
+                    AllowedGrantTypes = GrantTypes.CodeAndClientCredentials ,
+                    AllowedScopes = { "api2.read_only", "openid", "profile", "email", "api1", "offline_access", "custom.profile"},
+                    AllowOfflineAccess = true,
+                },
+                ///////////////////////////////////////////
+                // Console Client Credentials Flow Sample
+                //////////////////////////////////////////
+                new Client
+                {
                     ClientId = "client",
                     ClientSecrets =
                     {

@@ -22,7 +22,7 @@ namespace Host
                 //    options.ListenerSettings.Authentication.AllowAnonymous = true;
                 //})
                 .UseKestrel()
-                .UseUrls("http://localhost:5000")
+                .UseUrls("http://localhost:8080")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
