@@ -148,7 +148,8 @@ namespace IdentityServer4
                                 JwtClaimTypes.BirthDate,
                                 JwtClaimTypes.ZoneInfo,
                                 JwtClaimTypes.Locale,
-                                JwtClaimTypes.UpdatedAt 
+                                JwtClaimTypes.UpdatedAt,
+                                JwtClaimTypes.Role 
                             }},
             { IdentityServerConstants.StandardScopes.Email, new[]
                             { 
